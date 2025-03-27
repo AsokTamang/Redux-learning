@@ -5,7 +5,7 @@ const defaultState = {
   authenticated: false
 };
 
-const authReducer = (state = defaultState, action) => {
+const authReducer = (state = defaultState, action) => {    //this is the reducer
 
   switch (action.type) {
     case LOGIN: 
@@ -24,15 +24,15 @@ const authReducer = (state = defaultState, action) => {
 
 };
 
-const store = Redux.createStore(authReducer);
+const store = Redux.createStore(authReducer);   //this is creating the store.
 
-const loginUser = () => {
+const loginUser = () => {   //this is the action creator.
   return {
     type: LOGIN
   }
 };
 
-const logoutUser = () => {
+const logoutUser = () => {  //this is also the action creator.
   return {
     type: LOGOUT
   }
